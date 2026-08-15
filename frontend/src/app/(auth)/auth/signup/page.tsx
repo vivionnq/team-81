@@ -192,7 +192,7 @@ export default function SignUpPage() {
         Already have an account?{' '}
         <Link
           href="/auth/signin"
-          className="font-medium text-zinc-500 hover:underline"
+          className="font-medium text-zinc-500 underline"
         >
           Sign in
         </Link>
