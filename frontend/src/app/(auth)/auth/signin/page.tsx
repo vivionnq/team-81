@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
@@ -11,8 +11,10 @@ import { loginSchema, type LoginInput } from '@/lib/validations/auth'
 import { FullPageSpinner } from '@/components/shared/LoadingSpinner'
 
 export default function SignInPage() {
+  
   const router = useRouter()
   const { user, loading, signInWithEmail, signInWithGoogle } = useAuth()
+  const [loginErrorMessage, setLoginErrorMessage] = useState<string | null>(null)
 
   const {
     register,
@@ -38,6 +40,7 @@ export default function SignInPage() {
   if (loading) return <FullPageSpinner />
 
   const onSubmit = async (data: LoginInput) => {
+    setLoginErrorMessage(null)
     try {
       await signInWithEmail(data.email, data.password)
       toast.success('Signed in successfully')
@@ -45,9 +48,10 @@ export default function SignInPage() {
       router.refresh()
     } catch (error: unknown) {
       if (error instanceof Error && error.message.includes('email-not-verified')) {
-        toast.error('Please verify your email before signing in.')
+        // toast.error('Please verify your email before signing in.')
+        setLoginErrorMessage('Please verify your email before signing in.')
       } else {
-        toast.error('Invalid email or password')
+        // toast.error('Invalid email or password')
       }
     }
   }
