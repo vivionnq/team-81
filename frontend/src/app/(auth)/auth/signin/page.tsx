@@ -101,7 +101,7 @@ export default function SignInPage() {
 
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t border-zinc-200 border-zinc-600" />
+          <span className="w-full border-t border-zinc-600" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
           <span className="bg-card px-2 text-zinc-600">or</span>
@@ -172,7 +172,7 @@ export default function SignInPage() {
         Don&apos;t have an account?{' '}
         <Link
           href="/auth/signup"
-          className="font-medium text-zinc-900 hover:underline"
+          className="font-medium text-zinc-500 hover:underline"
         >
           Create one
         </Link>
