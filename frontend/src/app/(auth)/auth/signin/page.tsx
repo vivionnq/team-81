@@ -52,6 +52,7 @@ export default function SignInPage() {
         setLoginErrorMessage('Please verify your email before signing in.')
       } else {
         // toast.error('Invalid email or password')
+        setLoginErrorMessage('Invalid email or password')
       }
     }
   }
@@ -151,6 +152,12 @@ export default function SignInPage() {
             </p>
           )}
         </div>
+
+        {loginErrorMessage && (
+          <p className="text-xs text-red-500" role="alert">
+            {loginErrorMessage}
+          </p>
+        )}
 
         <button
           type="submit"
