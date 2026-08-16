@@ -34,36 +34,35 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   {
-    id: 'josip',
-    name: 'Josip',
-    role: 'Developer (DEV 2)',
+    id: 's4090043',
+    name: 'Vivian Tran',
+    role: 'Project Manager',
     responsibility:
-      'Front-end development and Bootstrap restyling — built the Team page and the post-login redirect flow.',
-    links: [{ label: 'GitHub', href: 'https://github.com/vivionnq/team-81' }],
+      'Coordinates the team, plans and tracks sprints, maintains the product backlog, and keeps delivery on schedule.',
   },
   {
-    id: 'member-2',
-    name: 'Team Member',
-    role: 'Role',
-    responsibility: 'Brief responsibility or project contribution.',
+    id: 's3818058',
+    name: 'Minwoo Tak',
+    role: 'Developer',
+    responsibility: 'Builds and tests application features, implements the UI, and writes and reviews code across the stack.',
   },
   {
-    id: 'member-3',
-    name: 'Team Member',
-    role: 'Role',
-    responsibility: 'Brief responsibility or project contribution.',
+    id: 's4094394',
+    name: 'Josip Kasic',
+    role: 'Developer',
+    responsibility: 'Builds and tests application features, implements the UI, and writes and reviews code across the stack.',
   },
   {
-    id: 'member-4',
-    name: 'Team Member',
-    role: 'Role',
-    responsibility: 'Brief responsibility or project contribution.',
+    id: 's4066094',
+    name: 'Sakshi Patel',
+    role: 'UX Designer',
+    responsibility: 'Designs the interface and user flows, produces wireframes and visual layouts, and ensures a consistent, usable experience.',
   },
   {
-    id: 'member-5',
-    name: 'Team Member',
-    role: 'Role',
-    responsibility: 'Brief responsibility or project contribution.',
+    id: 's4053411',
+    name: 'Guan Hanyang',
+    role: 'Business Analyst',
+    responsibility: "Gathers and documents requirements, defines acceptance criteria, and aligns stakeholder needs with the team's work.",
   },
 ]
 
