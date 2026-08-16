@@ -5,7 +5,7 @@
 All environment variables live in the **root `.env`** — the single source of truth:
 
 ```bash
-cp .env.example .env    # once
+pnpom    # once
 # fill in values, then:
 pnpm run env:sync       # also runs automatically before `pnpm run dev`
 ```
